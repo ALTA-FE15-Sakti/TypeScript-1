@@ -1,0 +1,12 @@
+function isArmstrongNumber(number: number): boolean {
+  const numString = number.toString();
+  const power = numString.length;
+  let sum = 0;
+
+  for (const digitChar of numString) {
+    const digit = Number(digitChar);
+    sum += Math.pow(digit, power);
+  }
+
+  return sum === number;
+}
